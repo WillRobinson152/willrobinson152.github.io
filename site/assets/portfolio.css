@@ -104,3 +104,54 @@ body { min-height: 100vh; }
 .arrow { color: var(--accent); }
 .work-card p, .section-copy, .site-footer { color: var(--muted); }
 .section-copy { max-width: 66ch; line-height: 1.8; }
+
+.journalism-job {
+  border-top: 1px solid var(--line);
+  padding-block: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.journalism-job:last-child { padding-bottom: 0; }
+
+.journalism-employer {
+  font-family: Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  letter-spacing: -.025em;
+}
+
+.journalism-dates,
+.journalism-award-year {
+  color: var(--accent);
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.journalism-award {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+}
+
+.journalism-award + .journalism-award { margin-top: .5rem; }
+
+.journalism-award summary {
+  cursor: pointer;
+  padding: .75rem 1rem;
+}
+
+.journalism-award summary:hover { background: #efede4; }
+.journalism-award summary:focus-visible { outline: 2px solid var(--accent); }
+.journalism-award summary::marker { color: var(--accent); }
+.journalism-award-year { margin-inline: .25rem .5rem; }
+.journalism-award-name { font-weight: 600; }
+
+.journalism-award-body {
+  border-top: 1px solid var(--line);
+  padding: 1rem;
+}
+
+.journalism-quote {
+  border-inline-start: 2px solid var(--accent);
+  color: var(--muted);
+  line-height: 1.65;
+  padding-inline-start: .85rem;
+}
