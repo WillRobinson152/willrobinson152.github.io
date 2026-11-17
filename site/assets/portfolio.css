@@ -1,0 +1,106 @@
+:root {
+  --paper: #f6f4ee;
+  --ink: #192f2b;
+  --muted: #4d5c55;
+  --accent: #a84632;
+  --line: #d8d9cf;
+  --bs-body-bg: var(--paper);
+  --bs-body-color: var(--ink);
+  --bs-link-color: var(--ink);
+  --bs-link-hover-color: var(--accent);
+  --bs-body-font-family: system-ui, sans-serif;
+}
+
+body { min-height: 100vh; }
+.site-width { max-width: 1120px; }
+
+.site-header, .site-footer { border-color: var(--line) !important; }
+
+.site-brand {
+  color: var(--ink);
+  font-family: Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.site-nav {
+  column-gap: clamp(.65rem, 2.5vw, 2rem);
+  row-gap: .25rem;
+}
+
+.site-nav .nav-link {
+  color: var(--muted);
+  padding: .35rem 0;
+  border-bottom: 2px solid transparent;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link[aria-current="page"] {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+.hero {
+  background: var(--ink);
+  color: var(--paper);
+  padding: clamp(3.75rem, 9vw, 8rem) 0;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(3.25rem, 9vw, 7.5rem);
+  letter-spacing: -.065em;
+  line-height: .97;
+  margin: 0;
+  overflow-wrap: break-word;
+}
+
+.hero .section-title {
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  letter-spacing: -.05em;
+}
+
+.hero-label {
+  color: #f0a991;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  color: #e3e8df;
+  border-left: 2px solid #f0a991;
+  padding-left: 1.25rem;
+  max-width: 34rem;
+}
+
+.hero-copy p { line-height: 1.7; }
+
+.content-section { padding-block: clamp(2.75rem, 6vw, 5rem); }
+
+.content-section h2 {
+  font-family: Georgia, serif;
+  letter-spacing: -.035em;
+}
+
+.work-card {
+  --bs-card-bg: #fffdf8;
+  --bs-card-border-color: var(--line);
+  --bs-card-border-radius: .35rem;
+  border-top: 3px solid var(--accent);
+  transition: background-color .15s ease, border-color .15s ease;
+}
+
+.work-card:hover, .work-card:focus-within {
+  background: #efede4;
+  border-color: var(--accent);
+}
+
+.work-card a { text-decoration: none; }
+.work-card a:focus-visible { outline-offset: .25rem; }
+.arrow { color: var(--accent); }
+.work-card p, .section-copy, .site-footer { color: var(--muted); }
+.section-copy { max-width: 66ch; line-height: 1.8; }
