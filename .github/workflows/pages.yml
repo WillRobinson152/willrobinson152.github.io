@@ -23,8 +23,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Export and check Pages artifact
+        run: python3 tools/check_pages.py "${{ runner.temp }}/checked-pages"
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ${{ runner.temp }}/checked-pages
       - uses: actions/deploy-pages@v4
         id: deployment

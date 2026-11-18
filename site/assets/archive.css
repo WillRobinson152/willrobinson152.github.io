@@ -1,0 +1,15 @@
+.archive-controls { max-width: 30rem; }
+.archive-clip { max-width: 58rem; margin-inline: auto; overflow-wrap: anywhere; }
+.archive-clip h1, .archive-clip h2 { font-family: Georgia, serif; }
+.archive-clip h1 { font-size: clamp(1.9rem, 5vw, 3.4rem); }
+.archive-clip p, .archive-clip li { line-height: 1.75; }
+.archive-clip > p, .archive-clip > ul, .archive-clip > blockquote { max-width: 75ch; }
+.archive-clip h4 { font-size: 1.25rem; }
+.archive-clip a { text-decoration: underline; }
+.archive-clip figure, .archive-embed { margin-block: 1.5rem; }
+.archive-clip img { display: block; max-width: 100%; height: auto; }
+.archive-clip figcaption, .archive-media-note { color: var(--muted); }
+.archive-clip audio { display: block; max-width: 100%; }
+.archive-embed iframe { display: block; width: 100%; min-height: 32rem; border: 0; margin-top: 1rem; }
+.archive-result { border-top: 1px solid var(--line); padding-block: .75rem; }
+.archive-result button { text-align: start; }

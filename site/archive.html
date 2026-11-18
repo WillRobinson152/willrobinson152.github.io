@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src blob:; media-src blob:; frame-src https://public.flourish.studio; base-uri 'none'; form-action 'none'">
+  <title>Private article archive | Will Robinson</title>
+  <link rel="stylesheet" href="assets/flatly.min.css">
+  <link rel="stylesheet" href="assets/portfolio.css">
+  <link rel="stylesheet" href="assets/archive.css">
+  <script src="assets/archive.js" defer></script>
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute bg-light p-2" href="#main">Skip to content</a>
+  <header class="site-header border-bottom">
+    <div class="container site-width d-flex flex-wrap align-items-center justify-content-between gap-2 py-3">
+      <a class="site-brand text-decoration-none" href="index.html">Will Robinson</a>
+      <nav class="nav site-nav" aria-label="Main navigation">
+        <a class="nav-link" href="journalism.html">Back to Journalism</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="container site-width">
+        <h1 id="page-title" class="section-title">Private article archive</h1>
+      </div>
+    </section>
+    <div class="container site-width content-section">
+      <noscript>Enable JavaScript to unlock this archive.</noscript>
+      <form id="unlock" class="archive-controls">
+        <label class="form-label" for="passphrase">Archive passphrase</label>
+        <input class="form-control mb-3" id="passphrase" type="password" required autocomplete="off">
+        <button class="btn btn-primary" type="submit">Unlock archive</button>
+      </form>
+      <p id="status" class="mt-3" role="status"></p>
+      <section id="library" aria-label="Archive articles" hidden>
+        <button id="lock" class="btn btn-outline-primary mb-4" type="button">Lock archive</button>
+        <div id="browse">
+          <div class="archive-controls">
+            <label class="form-label" for="search">Search articles</label>
+            <input class="form-control mb-4" id="search" type="search" autocomplete="off">
+          </div>
+          <ul id="results" class="list-unstyled"></ul>
+        </div>
+        <div id="reading" hidden>
+          <button id="back" class="btn btn-outline-primary mb-4" type="button">Back to articles</button>
+          <article id="clip" class="archive-clip" tabindex="-1"></article>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
