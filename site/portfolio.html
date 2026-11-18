@@ -47,7 +47,20 @@
             <label class="form-label" for="search">Search articles</label>
             <input class="form-control mb-4" id="search" type="search" autocomplete="off">
           </div>
-          <ul id="results" class="list-unstyled"></ul>
+          <div class="portfolio-table-scroll" role="region" aria-label="Portfolio table" tabindex="0">
+            <table class="portfolio-table">
+              <caption class="visually-hidden">Published articles and awards</caption>
+              <thead>
+                <tr>
+                  <th scope="col" aria-sort="descending"><button type="button" data-sort="date">Published date</button></th>
+                  <th scope="col"><button type="button" data-sort="title">Title</button></th>
+                  <th scope="col"><button type="button" data-sort="publisher">Publication</button></th>
+                  <th scope="col"><button type="button" data-sort="award">Award</button></th>
+                </tr>
+              </thead>
+              <tbody id="results"></tbody>
+            </table>
+          </div>
         </div>
         <div id="reading" hidden>
           <button id="back" class="btn btn-outline-primary mb-4" type="button">Back to articles</button>

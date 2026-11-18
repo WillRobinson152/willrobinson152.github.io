@@ -9,6 +9,18 @@ const browse = byId('browse');
 const reading = byId('reading');
 const search = byId('search');
 const results = byId('results');
+const sortButtons = browse.querySelectorAll('[data-sort]');
+const compareText = new Intl.Collator('en', { sensitivity: 'base', numeric: true });
+const displayDate = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
+});
+// These titles and their awards are listed on the public Journalism page.
+const awards = new Map([
+  ['DataDigest: Yes, buyer agents steer clients, new study claims', 'SABEW Data Journalism'],
+  ['Employed & Homeless: As CSX changes plans, dispatchers left in limbo during holidays', 'SABEW Transportation Honorable Mention'],
+  ['Historic dividends : Preserving or demolishing downtown Jacksonville', 'NAREE Bronze'],
+  ['Parking Pitch', 'SABEW Government Reporting'],
+]);
 const clip = byId('clip');
 const encoder = new TextEncoder();
 const decoder = new TextDecoder('utf-8', { fatal: true });
@@ -43,22 +55,41 @@ async function decrypt(key, name, data, prefix) {
 function showResults() {
   results.replaceChildren();
   const words = search.value.toLocaleLowerCase().trim().split(/\s+/);
+  const { key, direction } = session.sort;
   const matches = session.articles.filter(article => {
-    const text = [article.title, article.publisher, article.date].join(' ').toLocaleLowerCase();
+    const text = [article.title, article.publisher, article.date, article.award].join(' ').toLocaleLowerCase();
     return words.every(word => text.includes(word));
   });
+  matches.sort((first, second) => (
+    direction * compareText.compare(first[key], second[key])
+    || compareText.compare(first.title, second.title)
+  ));
+  for (const sortButton of sortButtons) {
+    const header = sortButton.parentElement;
+    if (sortButton.dataset.sort === key) {
+      header.setAttribute('aria-sort', direction === 1 ? 'ascending' : 'descending');
+    } else {
+      header.removeAttribute('aria-sort');
+    }
+  }
   for (const article of matches) {
-    const item = document.createElement('li');
-    item.className = 'archive-result';
+    const row = results.insertRow();
+    const published = row.insertCell();
+    if (article.date) {
+      const time = document.createElement('time');
+      const date = new Date(article.date);
+      time.dateTime = article.date;
+      time.textContent = Number.isNaN(date.getTime()) ? article.date : displayDate.format(date);
+      published.append(time);
+    }
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'btn btn-link p-0 fw-semibold';
+    button.className = 'btn btn-link p-0 fw-semibold portfolio-title';
     button.textContent = article.title;
     button.addEventListener('click', () => openArticle(article));
-    const metadata = document.createElement('div');
-    metadata.textContent = [article.publisher, article.date].filter(Boolean).join(' · ');
-    item.append(button, metadata);
-    results.append(item);
+    row.insertCell().append(button);
+    row.insertCell().textContent = article.publisher;
+    row.insertCell().textContent = article.award || '—';
   }
   status.textContent = matches.length === 1 ? '1 article' : `${matches.length} articles`;
 }
@@ -152,7 +183,12 @@ unlock.addEventListener('submit', async event => {
     }, material, { name: 'AES-GCM', length: 256 }, false, ['decrypt']);
     const articles = JSON.parse(decoder.decode(await decrypt(key, indexName, data, prefix)));
     if (request.signal.aborted) return;
-    session = { key, articles, prefix };
+    session = {
+      key, prefix, sort: { key: 'date', direction: -1 },
+      articles: articles.map(article => ({
+        ...article, award: awards.get(article.title) ?? '',
+      })),
+    };
     unlock.hidden = true;
     library.hidden = false;
     showResults();
@@ -181,6 +217,15 @@ function lock(restoreFocus) {
 }
 
 search.addEventListener('input', showResults);
+for (const button of sortButtons) {
+  button.addEventListener('click', () => {
+    const key = button.dataset.sort;
+    const previous = session.sort;
+    const direction = key === previous.key ? -previous.direction : key === 'date' ? -1 : 1;
+    session.sort = { key, direction };
+    showResults();
+  });
+}
 byId('back').addEventListener('click', () => {
   clearArticle();
   showResults();
