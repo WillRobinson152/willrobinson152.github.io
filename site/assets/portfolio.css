@@ -107,6 +107,18 @@ body { min-height: 100vh; }
 .work-card-copy { max-width: 60ch; line-height: 1.65; }
 .section-copy { max-width: 66ch; line-height: 1.8; }
 
+.prose-column {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+.prose-column .section-copy {
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.prose-column .section-copy + .section-copy { margin-top: 1.25rem; }
+
 .section-copy a {
   text-decoration-thickness: 1px;
   text-underline-offset: .18em;
