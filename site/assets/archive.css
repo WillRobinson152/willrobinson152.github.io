@@ -11,5 +11,6 @@
 .archive-clip figcaption, .archive-media-note { color: var(--muted); }
 .archive-clip audio { display: block; max-width: 100%; }
 .archive-embed iframe { display: block; width: 100%; min-height: 32rem; border: 0; margin-top: 1rem; }
+.archive-embed .archive-story-frame { height: clamp(32rem, 78svh, 56rem); }
 .archive-result { border-top: 1px solid var(--line); padding-block: .75rem; }
 .archive-result button { text-align: start; }

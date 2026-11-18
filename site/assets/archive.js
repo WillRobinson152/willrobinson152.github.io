@@ -77,9 +77,13 @@ function configureEmbeds() {
   for (const container of clip.querySelectorAll('[data-flourish]')) {
     const path = container.dataset.flourish;
     if (!/^(story|visualisation)\/[0-9]+$/.test(path)) continue;
-    const embedURL = `https://flo.uri.sh/${path}/embed`;
+    const isStory = path.startsWith('story/');
+    const embedURL = isStory
+      ? `https://public.flourish.studio/${path}/`
+      : `https://flo.uri.sh/${path}/embed`;
     const frame = document.createElement('iframe');
-    frame.title = 'Interactive graphic from Flourish';
+    frame.title = isStory ? 'Scrollable story from Flourish' : 'Interactive graphic from Flourish';
+    if (isStory) frame.className = 'archive-story-frame';
     frame.referrerPolicy = 'no-referrer';
     frame.sandbox.add('allow-scripts', 'allow-same-origin');
     frame.src = embedURL;
