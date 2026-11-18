@@ -44,9 +44,10 @@ The packager preserves article content beginning at the first headline, keeps
 captions and HTTP(S) source links, and filters markup to supported elements.
 Supply local copies of permitted media. Missing media gets an inline
 placeholder. For an existing Flourish visualization, confirm reuse permission
-and test its public embed URL before adding its provider ID (for example,
-`visualisation/123`) to the article's optional `flourish` array. Readers load
-each allowed embed by selecting its Flourish button.
+and test its embed URL at `https://flo.uri.sh/<provider-id>/embed` before adding
+its provider ID (for example, `visualisation/123`) to the article's optional
+`flourish` array. The reader loads approved embeds when the article opens and
+includes a link to each graphic on Flourish.
 
 To add an article, add its clip, metadata and any approved media to the private
 manifest and build a fresh bundle for the entire archive. Move the previous

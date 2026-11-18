@@ -77,20 +77,19 @@ function configureEmbeds() {
   for (const container of clip.querySelectorAll('[data-flourish]')) {
     const path = container.dataset.flourish;
     if (!/^(story|visualisation)\/[0-9]+$/.test(path)) continue;
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'btn btn-outline-primary';
-    button.textContent = 'Load interactive graphic from Flourish';
-    button.addEventListener('click', () => {
-      const frame = document.createElement('iframe');
-      frame.title = 'Interactive graphic from Flourish';
-      frame.referrerPolicy = 'no-referrer';
-      frame.sandbox.add('allow-scripts', 'allow-same-origin');
-      frame.src = `https://public.flourish.studio/${path}/embed`;
-      button.replaceWith(frame);
-      frame.focus();
-    }, { once: true });
-    container.append(button);
+    const embedURL = `https://flo.uri.sh/${path}/embed`;
+    const frame = document.createElement('iframe');
+    frame.title = 'Interactive graphic from Flourish';
+    frame.referrerPolicy = 'no-referrer';
+    frame.sandbox.add('allow-scripts', 'allow-same-origin');
+    frame.src = embedURL;
+
+    const directLink = document.createElement('a');
+    directLink.href = embedURL;
+    directLink.target = '_blank';
+    directLink.rel = 'noopener noreferrer';
+    directLink.textContent = 'Open on Flourish (new tab)';
+    container.append(frame, directLink);
   }
 }
 
