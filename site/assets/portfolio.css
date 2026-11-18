@@ -129,7 +129,7 @@ body { min-height: 100vh; }
   letter-spacing: -.025em;
 }
 
-.experience-meta,
+.journalism-dates,
 .journalism-award-year {
   color: var(--accent);
   font-size: .875rem;
