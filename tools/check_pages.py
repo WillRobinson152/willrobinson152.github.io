@@ -8,7 +8,7 @@ import subprocess
 import tarfile
 
 PUBLIC = set("""
-archive.html assets/archive.css assets/archive.js assets/bootstrap-LICENSE
+portfolio.html assets/archive.css assets/archive.js assets/bootstrap-LICENSE
 assets/bootswatch-LICENSE assets/flatly.min.css assets/portfolio.css coding.html
 data-analysis.html index.html journalism.html
 """.split())

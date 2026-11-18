@@ -159,7 +159,7 @@ unlock.addEventListener('submit', async event => {
     search.focus();
   } catch {
     if (request.signal.aborted) return;
-    status.textContent = 'Could not unlock the archive. Check the passphrase and try again.';
+    status.textContent = 'Could not unlock the archive. Check the password and try again.';
     passphrase.focus();
   } finally {
     if (unlockRequest === request) unlockRequest = undefined;
@@ -176,7 +176,7 @@ function lock(restoreFocus) {
   results.replaceChildren();
   library.hidden = true;
   unlock.hidden = false;
-  status.textContent = 'Archive locked.';
+  status.textContent = '';
   if (restoreFocus) passphrase.focus();
 }
 

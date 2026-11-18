@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src blob:; media-src blob:; frame-src https://flo.uri.sh https://public.flourish.studio; base-uri 'none'; form-action 'none'">
-  <title>Private article archive | Will Robinson</title>
+  <title>Reporting portfolio</title>
   <link rel="stylesheet" href="assets/flatly.min.css">
   <link rel="stylesheet" href="assets/portfolio.css">
   <link rel="stylesheet" href="assets/archive.css">
@@ -17,22 +17,27 @@
     <div class="container site-width d-flex flex-wrap align-items-center justify-content-between gap-2 py-3">
       <a class="site-brand text-decoration-none" href="index.html">Will Robinson</a>
       <nav class="nav site-nav" aria-label="Main navigation">
-        <a class="nav-link" href="journalism.html">Back to Journalism</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="journalism.html">Journalism</a>
+        <a class="nav-link" href="coding.html">Coding</a>
+        <a class="nav-link" href="data-analysis.html">Data Analysis</a>
+        <a class="nav-link" href="portfolio.html" aria-current="page">Portfolio</a>
       </nav>
     </div>
   </header>
   <main id="main" tabindex="-1">
     <section class="hero" aria-labelledby="page-title">
       <div class="container site-width">
-        <h1 id="page-title" class="section-title">Private article archive</h1>
+        <h1 id="page-title" class="section-title">Portfolio of selected work</h1>
       </div>
     </section>
     <div class="container site-width content-section">
+      <p class="section-copy mb-4">A selection of published articles is available on request. Email <a href="mailto:robinsonwilliamarthur@gmail.com">robinsonwilliamarthur@gmail.com</a> to request the password.</p>
       <noscript>Enable JavaScript to unlock this archive.</noscript>
       <form id="unlock" class="archive-controls">
-        <label class="form-label" for="passphrase">Archive passphrase</label>
+        <label class="form-label" for="passphrase">Password</label>
         <input class="form-control mb-3" id="passphrase" type="password" required autocomplete="off">
-        <button class="btn btn-primary" type="submit">Unlock archive</button>
+        <button class="btn btn-primary" type="submit">Open library</button>
       </form>
       <p id="status" class="mt-3" role="status"></p>
       <section id="library" aria-label="Archive articles" hidden>
