@@ -21,6 +21,26 @@ const awards = new Map([
   ['Historic dividends : Preserving or demolishing downtown Jacksonville', 'NAREE Bronze'],
   ['Parking Pitch', 'SABEW Government Reporting'],
 ]);
+const externalArticles = [
+  {
+    title: 'AI search loves listicles: What 25,000 URLs reveal about citations',
+    publisher: 'Search Engine Land',
+    date: '2026-03-19',
+    url: 'https://searchengineland.com/ai-search-loves-listicles-what-25000-urls-reveal-about-citations-477682',
+  },
+  {
+    title: 'What AI models are saying to voters ahead of the midterms',
+    publisher: 'Evertune/Orchestra',
+    date: '2026-08-28',
+    url: 'https://www.evertune.ai/resources/insights-on-ai/what-ai-models-are-saying-to-voters-ahead-of-the-midterms',
+  },
+  {
+    title: 'Where AI Sends Shoppers and Agents for Black Friday Deals',
+    publisher: 'Evertune',
+    date: '2026-10-28',
+    url: 'https://www.evertune.ai/resources/insights-on-ai/where-ai-sends-shoppers-and-agents-for-black-friday-deals',
+  },
+];
 const clip = byId('clip');
 const encoder = new TextEncoder();
 const decoder = new TextDecoder('utf-8', { fatal: true });
@@ -61,7 +81,7 @@ function showResults() {
     return words.every(word => text.includes(word));
   });
   matches.sort((first, second) => (
-    direction * compareText.compare(first[key], second[key])
+    direction * compareText.compare(first[key] ?? '', second[key] ?? '')
     || compareText.compare(first.title, second.title)
   ));
   for (const sortButton of sortButtons) {
@@ -82,12 +102,22 @@ function showResults() {
       time.textContent = Number.isNaN(date.getTime()) ? article.date : displayDate.format(date);
       published.append(time);
     }
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'btn btn-link p-0 fw-semibold portfolio-title';
-    button.textContent = article.title;
-    button.addEventListener('click', () => openArticle(article));
-    row.insertCell().append(button);
+    const title = document.createElement(article.url ? 'a' : 'button');
+    title.className = 'btn btn-link p-0 fw-semibold portfolio-title';
+    title.textContent = article.title;
+    if (article.url) {
+      title.href = article.url;
+      title.target = '_blank';
+      title.rel = 'noopener noreferrer';
+      const label = document.createElement('span');
+      label.className = 'visually-hidden';
+      label.textContent = ' (opens in a new tab)';
+      title.append(label);
+    } else {
+      title.type = 'button';
+      title.addEventListener('click', () => openArticle(article));
+    }
+    row.insertCell().append(title);
     row.insertCell().textContent = article.publisher;
     row.insertCell().textContent = article.award || '—';
   }
@@ -185,9 +215,10 @@ unlock.addEventListener('submit', async event => {
     if (request.signal.aborted) return;
     session = {
       key, prefix, sort: { key: 'date', direction: -1 },
-      articles: articles.map(article => ({
-        ...article, award: awards.get(article.title) ?? '',
-      })),
+      articles: [
+        ...articles.map(article => ({ ...article, award: awards.get(article.title) })),
+        ...externalArticles,
+      ],
     };
     unlock.hidden = true;
     library.hidden = false;
