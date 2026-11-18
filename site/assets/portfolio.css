@@ -99,20 +99,31 @@ body { min-height: 100vh; }
   border-color: var(--accent);
 }
 
+.work-card h3 { font-family: Georgia, serif; }
 .work-card a { text-decoration: none; }
 .work-card a:focus-visible { outline-offset: .25rem; }
 .arrow { color: var(--accent); }
-.work-card p, .section-copy, .site-footer { color: var(--muted); }
+.work-card-copy, .section-copy, .site-footer { color: var(--muted); }
+.work-card-copy { max-width: 60ch; line-height: 1.65; }
 .section-copy { max-width: 66ch; line-height: 1.8; }
 
-.journalism-job {
+.section-copy a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: .18em;
+}
+
+.experience-list { padding-inline-start: 1.25rem; }
+.experience-list li::marker { color: var(--accent); }
+.experience-list li + li { margin-top: .5rem; }
+
+.experience-entry {
   border-top: 1px solid var(--line);
   padding-block: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-.journalism-job:last-child { padding-bottom: 0; }
+.experience-entry:last-child { padding-bottom: 0; }
 
-.journalism-employer {
+.experience-title {
   font-family: Georgia, serif;
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   letter-spacing: -.025em;
