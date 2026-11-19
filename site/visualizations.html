@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualization | Will Robinson</title>
+    <link rel="stylesheet" href="assets/flatly.min.css">
+    <link rel="stylesheet" href="assets/portfolio.css">
+</head>
+
+<body class="d-flex flex-column">
+    <a class="visually-hidden-focusable position-absolute bg-light p-2" href="#main">Skip to content</a>
+    <header class="site-header border-bottom">
+        <div class="container site-width d-flex flex-wrap align-items-center justify-content-between gap-2 py-3">
+            <a class="site-brand text-decoration-none" href="index.html">Will Robinson</a>
+            <nav class="nav site-nav" aria-label="Main navigation">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="journalism.html">Journalism</a>
+                <a class="nav-link" href="coding.html" aria-current="page">Coding</a>
+                <a class="nav-link" href="data-analysis.html">Data Analysis</a>
+                <a class="nav-link" href="portfolio.html">Portfolio</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main" class="flex-grow-1" tabindex="-1">
+        <section class="hero" aria-labelledby="page-title">
+            <div class="container site-width">
+                <h1 id="page-title" class="section-title mb-4">Data Visualization</h1>
+                <div class="hero-copy">
+                    <p class="mb-0">Robinson has authored hundreds of visualizations for his own reporting at multiple
+                        outlets and built automated workflows to support updates to thousands more.</p>
+                </div>
+            </div>
+        </section>
+        <section class="container site-width content-section" aria-labelledby="work-heading">
+            <div class="prose-column">
+                <h2 id="work-heading" class="display-6 mb-4">Selected works</h2>
+
+                <p>Robinson has authored data visualizations in Tableau, Data Studio, Power BI, Datawrapper, Everviz, Flourish and other tools. He has also built custom HTML charts with AI tools like Claude Code. Here are some of his works from recent outlets:</p>
+
+                <h4>Evertune AI</h4>
+
+                <p>In his role as AI Insights Editor, Robinson showcased the kinds of insights useres of the Evertune can find with the platform's data on LLM responses. He worked with design and product teams to align with aesthetic brand guidelines and with data science and engineering teams to ensure data was presented accurately and with the appropriate context.</p>
+
+
+                <div id="et-prompt-vol" class="et-prompt-vol">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+                        rel="stylesheet">
+                    <style>
+                        #et-prompt-vol,
+                        #et-prompt-vol :where(*:not(svg, svg *)) {
+                            all: revert;
+                        }
+
+                        #et-prompt-vol,
+                        #et-prompt-vol * {
+                            box-sizing: border-box;
+                        }
+
+                        #et-prompt-vol {
+                            display: block;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            word-spacing: normal;
+                            text-align: left;
+                            text-indent: 0;
+                            text-transform: none;
+                            text-shadow: none;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            white-space: normal;
+                            visibility: visible;
+                            width: 100%;
+                            max-width: 760px;
+                            margin: 0;
+                            padding: 26px 26px 20px;
+                            background: #FFFDFB;
+                            font-family: 'DM Sans', Arial, sans-serif;
+                            -webkit-font-smoothing: antialiased;
+                            color: #121212;
+                        }
+
+                        #et-prompt-vol .etbf-chart-title {
+                            margin: 0 0 18px 0;
+                            font-size: 28px;
+                            line-height: 1.15;
+                            font-weight: 400;
+                            color: #121212;
+                            letter-spacing: -0.04em;
+                        }
+
+                        #et-prompt-vol .etbf-pv-row {
+                            display: flex;
+                            gap: 28px;
+                            align-items: flex-start;
+                        }
+
+                        #et-prompt-vol .etbf-pv-panel {
+                            min-width: 0;
+                        }
+
+                        #et-prompt-vol .etbf-pv-line {
+                            flex: 1.55 1 0;
+                        }
+
+                        #et-prompt-vol .etbf-pv-pie {
+                            flex: 1 1 0;
+                        }
+
+                        #et-prompt-vol .etbf-pv-head {
+                            margin: 0 0 2px 0;
+                            padding-top: 10px;
+                            border-top: 1.5px solid #E2D8CD;
+                            font-size: 15px;
+                            font-weight: 500;
+                            color: #121212;
+                            letter-spacing: -0.02em;
+                        }
+
+                        #et-prompt-vol .etbf-pv-note {
+                            margin: 0 0 8px 0;
+                            font-size: 12px;
+                            color: #6E6A66;
+                        }
+
+                        #et-prompt-vol svg {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                            font-family: 'DM Sans', Arial, sans-serif;
+                        }
+
+                        #et-prompt-vol .etbf-pv-pie svg {
+                            max-width: 220px;
+                            margin: 4px auto 0;
+                        }
+
+                        @media (max-width: 600px) {
+                            #et-prompt-vol .etbf-pv-pie svg {
+                                max-width: 180px;
+                            }
+                        }
+
+                        #et-prompt-vol .etbf-pv-legend {
+                            list-style: none;
+                            color: #6E6A66;
+                            margin: 12px 0 0 0;
+                            padding: 0;
+                            font-size: 12.5px;
+                        }
+
+                        #et-prompt-vol .etbf-pv-legend li {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            padding: 4px 0;
+                            border-bottom: 1px solid #EEE6DD;
+                        }
+
+                        #et-prompt-vol .etbf-pv-legend li:last-child {
+                            border-bottom: none;
+                        }
+
+                        #et-prompt-vol .etbf-pv-legend i {
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            flex: 0 0 auto;
+                        }
+
+                        #et-prompt-vol .etbf-pv-m {
+                            font-weight: 500;
+                        }
+
+                        #et-prompt-vol .etbf-pv-s {
+                            margin-left: auto;
+                            font-weight: 600;
+                            color: #121212;
+                            font-variant-numeric: tabular-nums;
+                        }
+
+                        #et-prompt-vol .etbf-footer-row {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 16px;
+                            width: 100%;
+                            padding: 18px 0 0 0;
+                        }
+
+                        #et-prompt-vol .etbf-footer-source {
+                            color: #6E6A66;
+                            font-family: 'DM Mono', ui-monospace, monospace;
+                            font-size: 11px;
+                            letter-spacing: 0.04em;
+                            text-transform: uppercase;
+                        }
+
+                        #et-prompt-vol .etbf-footer-logo {
+                            height: 26px;
+                            width: 110px;
+                            flex: 0 0 auto;
+                            display: block;
+                        }
+
+                        @media (max-width: 600px) {
+                            #et-prompt-vol .etbf-pv-row {
+                                flex-direction: column;
+                                gap: 22px;
+                            }
+
+                            #et-prompt-vol .etbf-pv-line,
+                            #et-prompt-vol .etbf-pv-pie {
+                                flex: none;
+                                width: 100%;
+                            }
+                        }
+
+                        @media (max-width: 520px) {
+                            #et-prompt-vol {
+                                padding: 18px 16px 14px;
+                            }
+
+                            #et-prompt-vol .etbf-chart-title {
+                                font-size: 24px;
+                            }
+                        }
+                    </style>
+
+                    <div class="etbf-wrap">
+                        <h3 class="etbf-chart-title">Estimated Prompt Volumes: &#8220;Black Friday deals,&#8221;
+                            &#8220;Black Friday sales,&#8221; &#8220;Cyber Monday&#8221;</h3>
+                        <div class="etbf-pv-row">
+                            <div class="etbf-pv-panel etbf-pv-line">
+                                <h4 class="etbf-pv-head">Weekly Prompts (Millions)</h4>
+                                <p class="etbf-pv-note">All three prompts combined, by week started</p>
+                                <svg viewBox="0 0 460 300" role="img"
+                                    aria-label="Line chart of weekly prompts in millions, rising from 0.46 million the week of Aug 2 to 1.45 million the week of Oct 4.">
+                                    <line x1="44" x2="438" y1="260.0" y2="260.0" stroke="#E2D8CD" stroke-width="1" />
+                                    <text x="36" y="260.0" text-anchor="end" dominant-baseline="central" font-size="12"
+                                        fill="#6E6A66" font-family="'DM Mono', ui-monospace, monospace"
+                                        letter-spacing="0.04em" style="text-transform:uppercase">0.0</text><text x="36"
+                                        y="199.5" text-anchor="end" dominant-baseline="central" font-size="12"
+                                        fill="#6E6A66" font-family="'DM Mono', ui-monospace, monospace"
+                                        letter-spacing="0.04em" style="text-transform:uppercase">0.4</text><text x="36"
+                                        y="139.0" text-anchor="end" dominant-baseline="central" font-size="12"
+                                        fill="#6E6A66" font-family="'DM Mono', ui-monospace, monospace"
+                                        letter-spacing="0.04em" style="text-transform:uppercase">0.8</text><text x="36"
+                                        y="78.5" text-anchor="end" dominant-baseline="central" font-size="12"
+                                        fill="#6E6A66" font-family="'DM Mono', ui-monospace, monospace"
+                                        letter-spacing="0.04em" style="text-transform:uppercase">1.2</text><text x="36"
+                                        y="18.0" text-anchor="end" dominant-baseline="central" font-size="12"
+                                        fill="#6E6A66" font-family="'DM Mono', ui-monospace, monospace"
+                                        letter-spacing="0.04em" style="text-transform:uppercase">1.6</text><text
+                                        x="87.8" y="280" text-anchor="middle" font-size="12" fill="#6E6A66"
+                                        font-family="'DM Mono', ui-monospace, monospace" letter-spacing="0.04em"
+                                        style="text-transform:uppercase">Aug 9</text><text x="175.3" y="280"
+                                        text-anchor="middle" font-size="12" fill="#6E6A66"
+                                        font-family="'DM Mono', ui-monospace, monospace" letter-spacing="0.04em"
+                                        style="text-transform:uppercase">Aug 23</text><text x="262.9" y="280"
+                                        text-anchor="middle" font-size="12" fill="#6E6A66"
+                                        font-family="'DM Mono', ui-monospace, monospace" letter-spacing="0.04em"
+                                        style="text-transform:uppercase">Sep 6</text><text x="350.4" y="280"
+                                        text-anchor="middle" font-size="12" fill="#6E6A66"
+                                        font-family="'DM Mono', ui-monospace, monospace" letter-spacing="0.04em"
+                                        style="text-transform:uppercase">Sep 20</text><text x="438.0" y="280"
+                                        text-anchor="middle" font-size="12" fill="#6E6A66"
+                                        font-family="'DM Mono', ui-monospace, monospace" letter-spacing="0.04em"
+                                        style="text-transform:uppercase">Oct 4</text>
+                                    <path
+                                        d="M44.0,260.0 L44.0,191.2 L87.8,176.1 L131.6,170.0 L175.3,135.2 L219.1,127.7 L262.9,113.3 L306.7,72.5 L350.4,66.4 L394.2,87.6 L438.0,40.7 L438.0,260.0 Z"
+                                        fill="#F7594E" fill-opacity="0.10" />
+                                    <polyline
+                                        points="44.0,191.2 87.8,176.1 131.6,170.0 175.3,135.2 219.1,127.7 262.9,113.3 306.7,72.5 350.4,66.4 394.2,87.6 438.0,40.7"
+                                        fill="none" stroke="#F7594E" stroke-width="3" stroke-linejoin="round"
+                                        stroke-linecap="round" />
+                                    <circle cx="44.0" cy="191.2" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Aug 2: 0.46M prompts</title>
+                                    </circle>
+                                    <circle cx="87.8" cy="176.1" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Aug 9: 0.56M prompts</title>
+                                    </circle>
+                                    <circle cx="131.6" cy="170.0" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Aug 16: 0.59M prompts</title>
+                                    </circle>
+                                    <circle cx="175.3" cy="135.2" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Aug 23: 0.82M prompts</title>
+                                    </circle>
+                                    <circle cx="219.1" cy="127.7" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Aug 30: 0.88M prompts</title>
+                                    </circle>
+                                    <circle cx="262.9" cy="113.3" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Sep 6: 0.97M prompts</title>
+                                    </circle>
+                                    <circle cx="306.7" cy="72.5" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Sep 13: 1.24M prompts</title>
+                                    </circle>
+                                    <circle cx="350.4" cy="66.4" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Sep 20: 1.28M prompts</title>
+                                    </circle>
+                                    <circle cx="394.2" cy="87.6" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Sep 27: 1.14M prompts</title>
+                                    </circle>
+                                    <circle cx="438.0" cy="40.7" r="4" fill="#F7594E" stroke="#FFFDFB"
+                                        stroke-width="1.5">
+                                        <title>Week of Oct 4: 1.45M prompts</title>
+                                    </circle><text x="50.0" y="211.2" font-size="13" font-weight="600"
+                                        fill="#121212">0.46M</text><text x="438.0" y="28.7" text-anchor="end"
+                                        font-size="13" font-weight="600" fill="#121212">1.45M</text>
+                                </svg>
+                            </div>
+                            <div class="etbf-pv-panel etbf-pv-pie">
+                                <h4 class="etbf-pv-head">Share of Prompts by AI Platform</h4>
+                                <p class="etbf-pv-note">Same 10 weeks, combined</p>
+                                <svg viewBox="0 0 260 260" role="img"
+                                    aria-label="Pie chart of prompt share by AI platform: ChatGPT 85.6%, Gemini 13.7%, Perplexity 0.6%, Copilot 0.1%.">
+                                    <path d="M130.0,130.0 L130.00,12.00 A118,118 0 1 1 37.19,57.13 Z" fill="#002829"
+                                        stroke="#FFFDFB" stroke-width="1.5">
+                                        <title>ChatGPT: 85.6%</title>
+                                    </path>
+                                    <path d="M130.0,130.0 L37.19,57.13 A118,118 0 0 1 124.72,12.12 Z" fill="#8FD6D0"
+                                        stroke="#FFFDFB" stroke-width="1.5">
+                                        <title>Gemini: 13.7%</title>
+                                    </path>
+                                    <path d="M130.0,130.0 L124.72,12.12 A118,118 0 0 1 129.37,12.00 Z" fill="#EEBE88"
+                                        stroke="#FFFDFB" stroke-width="1.5">
+                                        <title>Perplexity: 0.6%</title>
+                                    </path>
+                                    <path d="M130.0,130.0 L129.37,12.00 A118,118 0 0 1 130.00,12.00 Z" fill="#8E3229"
+                                        stroke="#FFFDFB" stroke-width="1.5">
+                                        <title>Copilot: 0.1%</title>
+                                    </path><text x="159.9" y="191.5" text-anchor="middle" dominant-baseline="central"
+                                        font-size="16" font-weight="600" fill="#ffffff">85.6%</text><text x="94.4"
+                                        y="60.7" text-anchor="middle" dominant-baseline="central" font-size="14"
+                                        font-weight="600" fill="#121212">13.7%</text>
+                                </svg>
+                                <ul class="etbf-pv-legend">
+                                    <li><i style="background:#002829"></i><span class="etbf-pv-m">ChatGPT</span><span
+                                            class="etbf-pv-s">85.6%</span></li>
+                                    <li><i style="background:#8FD6D0"></i><span class="etbf-pv-m">Gemini</span><span
+                                            class="etbf-pv-s">13.7%</span></li>
+                                    <li><i style="background:#EEBE88"></i><span class="etbf-pv-m">Perplexity</span><span
+                                            class="etbf-pv-s">0.6%</span></li>
+                                    <li><i style="background:#8E3229"></i><span class="etbf-pv-m">Copilot</span><span
+                                            class="etbf-pv-s">0.1%</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="etbf-footer-row">
+                            <span class="etbf-footer-source">Source: Evertune (www.evertune.ai)</span>
+                            <svg class="etbf-footer-logo" role="img" aria-label="Evertune"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 94.5" fill="#F7594E">
+                                <path
+                                    d="M8.9 94.2C2.9 93.6-0.3 89.1 0.1 81.8C0.4 76.6 2.3 69.5 7 56.4C9.4 49.7 9.3 50.4 7.7 50C1.9 48.8 3.1 44.8 10.1 42.5C12.8 41.6 12.7 41.7 17.9 30.5C22.9 19.6 23 19.1 20.9 19.6C16.7 20.6 12.6 22 11.3 23C9 24.6 5.8 23.3 5.7 20.6C5.7 18.1 7.5 16.9 13.9 14.8C19 13.2 23.8 11.7 24.2 11.7C25.1 11.8 26.8 10.6 27.4 9.6C28.8 7.2 29.6 6.9 32.6 8C34.9 8.8 36.4 8.6 46.6 6C51.6 4.7 59 2.9 63.1 1.8C71.3-0.3 71.5-0.3 73.2 1.2C76.1 3.6 73.3 5.5 62.9 8.3C58.2 9.5 43.7 13.5 37.8 15.1C34 16.1 33.7 16.4 32.2 20C30.4 24.2 26.1 34.2 25.4 35.9C24.3 38.7 23.4 38.8 46.5 33.1C52.4 31.6 54.4 31.8 55.4 33.8C56.2 35.3 55.4 36.6 53.2 37.3C51.7 37.9 37.4 41.9 29.6 44C19.7 46.6 20.4 45.6 13.7 65.9C7.3 85.2 7.8 88.4 16.9 86C27 83.3 33.2 80.9 40.1 77C44.9 74.3 46.8 73.9 48.9 75.3C51.6 76.8 50.8 79 46.8 81.7C34.2 90.1 18.7 95.3 8.9 94.2ZM191.8 89.8C190.8 89.1 190.1 87.4 190.3 85.8C190.7 82.3 198.1 58.3 202 47.8C202.4 46.6 202.8 45.6 202.8 45.5C202.8 45.4 200.8 45.3 198.4 45.4C194.4 45.6 194 45.5 192.9 45.1C191.8 44.5 191.8 44.5 191.8 46.7C191.8 53.1 188.7 55.8 185.3 52.5C184.4 51.6 184.4 51.5 184 47.7C183.4 42.6 182.8 42.7 177.8 49.4C173.7 54.8 172.7 56.3 165 68.2C155.5 82.9 154.4 84.3 151 84.2C144.7 84.2 144.7 79.2 151.2 65.9C151.6 64.9 151.6 64.9 149.7 66.2C139.9 73.1 127.6 79.7 121.1 81.6C109.5 85 99 76.9 101.4 66.5C106.6 44.1 128.8 24.1 136.5 34.8C141.2 41.3 129.1 59 112.7 69.9C108.6 72.6 108.3 73.7 111.1 75C116.4 77.4 137.1 67.3 153.3 54.3C159.3 49.6 163.3 43 163.9 37.3C164.3 32.8 165.4 31.1 167.8 31.3C171.4 31.7 172.6 36.3 170.5 42.6C169.9 44.3 169.9 44.5 170.5 44.5C170.9 44.5 171.5 43.9 176.5 38.3C181.1 33.1 188.1 33.6 190.5 39.4C191 40.4 191.2 40.7 191.5 40.6C192.1 40.4 196.9 39.8 201.1 39.5C203.1 39.4 204.8 39.2 204.9 39.2C204.9 39.2 206.2 35.8 207.7 31.6C216.1 9.3 218.5 5.6 222.2 9.9C223.7 11.5 223.6 11.7 221.3 17C220.6 18.7 219.1 22.1 218.1 24.4C216.3 28.5 212.7 38.5 212.8 38.7C212.9 38.7 216.3 38.6 220.4 38.3C229.7 37.8 231.2 38.1 231.2 40.4C231.2 42.6 229.8 43.1 219.5 43.9C214.7 44.3 210.9 44.6 210.8 44.6C210.8 44.7 204.9 62 201.1 73.6C195.7 89.8 195.9 89.4 195 89.9C194 90.4 192.8 90.3 191.8 89.8ZM274.4 89.9C271.4 88.8 271.3 87.1 274.1 81.3C275.2 78.9 277.5 73.9 279.3 70.3C282.8 62.7 282.8 62.8 280.6 65C274.1 71.3 262.3 80.1 257.4 82.4C248.2 86.6 241.5 83.7 240.6 75.1C240.4 72.4 240.3 72.4 236 76C229.8 81.2 228.3 81.8 224.9 81C218.3 79.3 220 68 229 53C235.1 42.7 238.7 39.6 242.2 41.3C244.5 42.5 244.3 43.6 241.3 48C236.5 55 233.5 60.4 231.3 66C228.5 73.1 229.2 72.8 239.5 62.3C248.8 52.7 249.4 52.3 252.4 53.8C254.9 55 255 55.8 252.9 60.8C248.3 71.5 247 78 249.6 78C254.2 78 272.2 64.7 284.8 51.8C288.9 47.6 288.9 47.6 289.5 40.1C290 33.8 291.3 31.9 294.4 32.7C298.2 33.7 299 37.2 297.4 45.6C296.4 50.9 296.5 51 299.2 50C305.7 47.6 308.9 52.3 307.6 62.6C306.5 72.3 307 76.7 309.2 76.1C312.9 75.2 326.7 64.3 337.8 53.3C341 50.1 343.8 47.5 344 47.5C344.1 47.5 345.1 46.3 346.2 44.9C355.4 33.1 364.4 29 370.1 34C376.4 39.5 364.5 58.2 347.8 69.4C342.4 73 342.3 75.1 347.5 75.4C354.8 76 380 62 391.2 51.1C395.7 46.8 397.8 46.3 399.5 49.1C403.2 55.2 365.2 81.3 351 82.4C342.2 83.1 334.2 75.9 335.5 68.2C335.7 66.4 335.9 66.3 333 69C320.6 80.5 312.8 85 307 84.1C300.2 83 298 77.7 299.2 64.5C299.4 62.5 299.5 60.9 299.4 60.9C298.6 60.1 298.1 60.7 293.2 67.9C291.9 69.8 289.6 73.2 288.1 75.4C279 88.9 278.4 89.6 277.1 90C275.9 90.3 275.6 90.3 274.4 89.9ZM64.6 83.7C60.2 81.5 61.1 76.6 72.9 38.3C74 34.6 75.3 33.8 77.9 34.9C80 35.7 80.8 40.3 79.3 42.5C78 44.6 73.3 61.9 74 62.6C74.4 63 75 62.3 81.6 52.5C89.3 41 94.9 33.5 96.2 32.6C97.8 31.6 101 32.3 101.7 33.9C102.3 35 101.8 36 97.1 43C92.4 50 85.1 61.4 79.4 70.6C71.1 84 68.9 85.9 64.6 83.7ZM111.7 62.7C116.7 59.8 129.4 44.2 129.7 40.3C130.2 34.6 118.1 46.3 113 56.5C110.2 62.2 109.8 63.7 111.7 62.7ZM346.6 62.2C353.2 57.8 365.6 41.4 364 39.2C362.1 36.8 351.9 47.3 347.6 56.1C344.3 62.8 344.1 63.9 346.6 62.2Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="et-top-retailer" class="et-top-retailer">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link
+                        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap"
+                        rel="stylesheet">
+                    <style>
+                        #et-top-retailer,
+                        #et-top-retailer :where(*:not(svg, svg *)) {
+                            all: revert;
+                        }
+
+                        #et-top-retailer,
+                        #et-top-retailer * {
+                            box-sizing: border-box;
+                        }
+
+                        #et-top-retailer {
+                            display: block;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            word-spacing: normal;
+                            text-align: left;
+                            text-indent: 0;
+                            text-transform: none;
+                            text-shadow: none;
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            white-space: normal;
+                            visibility: visible;
+                            width: 100%;
+                            max-width: 760px;
+                            margin: 0;
+                            padding: 26px 26px 20px;
+                            background: #FFFDFB;
+                            font-family: 'DM Sans', Arial, sans-serif;
+                            -webkit-font-smoothing: antialiased;
+                            color: #121212;
+                        }
+
+                        #et-top-retailer .etbf-chart-title {
+                            margin: 0 0 6px 0;
+                            font-size: 28px;
+                            line-height: 1.15;
+                            font-weight: 400;
+                            color: #121212;
+                            letter-spacing: -0.04em;
+                        }
+
+                        #et-top-retailer .etbf-chart-sub {
+                            margin: 0 0 16px 0;
+                            font-size: 14px;
+                            line-height: 1.5;
+                            color: #6E6A66;
+                        }
+
+                        #et-top-retailer .etbf-tr-grid {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 18px 28px;
+                        }
+
+                        #et-top-retailer .etbf-tr-panel {
+                            padding-top: 10px;
+                            border-top: 1.5px solid #E2D8CD;
+                        }
+
+                        #et-top-retailer .etbf-tr-cat {
+                            margin: 0 0 8px 0;
+                            font-size: 15px;
+                            line-height: 1.25;
+                            font-weight: 500;
+                            color: #121212;
+                            letter-spacing: -0.02em;
+                        }
+
+                        #et-top-retailer .etbf-tr-row {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            height: 24px;
+                            margin-bottom: 4px;
+                        }
+
+                        #et-top-retailer .etbf-tr-model {
+                            flex: 0 0 112px;
+                            font-size: 11.5px;
+                            font-weight: 400;
+                            color: #6E6A66;
+                            white-space: nowrap;
+                        }
+
+                        /* Track spans 0-100; the value label sits just past the bar's end. */
+                        #et-top-retailer .etbf-tr-track {
+                            position: relative;
+                            flex: 1 1 auto;
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            border-left: 1px solid #E2D8CD;
+                        }
+
+                        #et-top-retailer .etbf-tr-bar {
+                            display: flex;
+                            align-items: center;
+                            height: 20px;
+                            padding: 0 7px;
+                            border-radius: 0 6px 6px 0;
+                            overflow: hidden;
+                            min-width: 0;
+                        }
+
+                        #et-top-retailer .etbf-tr-name {
+                            font-size: 11.5px;
+                            font-weight: 500;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        #et-top-retailer .etbf-tr-val {
+                            flex: 0 0 auto;
+                            margin-left: 5px;
+                            font-size: 11.5px;
+                            font-weight: 600;
+                            font-variant-numeric: tabular-nums;
+                            color: #121212;
+                        }
+
+                        #et-top-retailer .etbf-tr-axis {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 2px;
+                            font-size: 10.5px;
+                            color: #6E6A66;
+                        }
+
+                        #et-top-retailer .etbf-footer-row {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            gap: 16px;
+                            width: 100%;
+                            padding: 18px 0 0 0;
+                        }
+
+                        #et-top-retailer .etbf-footer-source {
+                            color: #6E6A66;
+                            font-family: 'DM Mono', ui-monospace, monospace;
+                            font-size: 11px;
+                            letter-spacing: 0.04em;
+                            text-transform: uppercase;
+                        }
+
+                        #et-top-retailer .etbf-footer-logo {
+                            height: 26px;
+                            width: 110px;
+                            flex: 0 0 auto;
+                            display: block;
+                        }
+
+                        @media (max-width: 620px) {
+                            #et-top-retailer .etbf-tr-grid {
+                                grid-template-columns: 1fr;
+                            }
+                        }
+
+                        @media (max-width: 520px) {
+                            #et-top-retailer {
+                                padding: 18px 16px 14px;
+                            }
+
+                            #et-top-retailer .etbf-chart-title {
+                                font-size: 24px;
+                            }
+
+                            #et-top-retailer .etbf-tr-model {
+                                flex-basis: 104px;
+                                font-size: 11px;
+                            }
+                        }
+                    </style>
+
+                    <div class="etbf-wrap">
+                        <h3 class="etbf-chart-title">Top Retailer by AI Model and Category</h3>
+                        <p class="etbf-chart-sub">Each AI model&#8217;s highest-scoring retailer in each category. Bar
+                            length shows AI Brand Score (0&#8211;100).</p>
+                        <div class="etbf-tr-grid">
+                            <section class="etbf-tr-panel" aria-label="Beauty &amp; Personal Care">
+                                <h4 class="etbf-tr-cat">Beauty &amp; Personal Care</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:60.5%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Ulta Beauty</span></span><span
+                                            class="etbf-tr-val">60.5</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:54.7%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Ulta Beauty</span></span><span
+                                            class="etbf-tr-val">54.7</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:45.9%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Ulta Beauty</span></span><span
+                                            class="etbf-tr-val">45.9</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:54.1%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Ulta Beauty</span></span><span
+                                            class="etbf-tr-val">54.1</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:63.2%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Ulta Beauty</span></span><span
+                                            class="etbf-tr-val">63.2</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Clothing">
+                                <h4 class="etbf-tr-cat">Clothing</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:50.5%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Old Navy</span></span><span
+                                            class="etbf-tr-val">50.5</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:62.1%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Kohl’s</span></span><span
+                                            class="etbf-tr-val">62.1</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:33.3%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Kohl’s</span></span><span
+                                            class="etbf-tr-val">33.3</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:28.0%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Kohl’s</span></span><span
+                                            class="etbf-tr-val">28.0</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:65.7%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Old Navy</span></span><span
+                                            class="etbf-tr-val">65.7</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Furniture &amp; Home Decor">
+                                <h4 class="etbf-tr-cat">Furniture &amp; Home Decor</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:68.0%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Wayfair</span></span><span
+                                            class="etbf-tr-val">68.0</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:66.4%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Wayfair</span></span><span
+                                            class="etbf-tr-val">66.4</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:66.7%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Wayfair</span></span><span
+                                            class="etbf-tr-val">66.7</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:60.3%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Wayfair</span></span><span
+                                            class="etbf-tr-val">60.3</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:70.4%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Wayfair</span></span><span
+                                            class="etbf-tr-val">70.4</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Gaming &amp; Consoles">
+                                <h4 class="etbf-tr-cat">Gaming &amp; Consoles</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:46.3%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Walmart</span></span><span
+                                            class="etbf-tr-val">46.3</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:66.2%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Walmart</span></span><span
+                                            class="etbf-tr-val">66.2</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:57.6%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">57.6</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:51.7%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Walmart</span></span><span
+                                            class="etbf-tr-val">51.7</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:74.9%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">74.9</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Headphones &amp; Wearables">
+                                <h4 class="etbf-tr-cat">Headphones &amp; Wearables</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:55.6%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Target</span></span><span
+                                            class="etbf-tr-val">55.6</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:60.0%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">60.0</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:43.4%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Walmart</span></span><span
+                                            class="etbf-tr-val">43.4</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:49.2%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">49.2</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:79.1%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Amazon</span></span><span
+                                            class="etbf-tr-val">79.1</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Home Appliances &amp; Kitchen">
+                                <h4 class="etbf-tr-cat">Home Appliances &amp; Kitchen</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:45.4%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Target</span></span><span
+                                            class="etbf-tr-val">45.4</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:55.8%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">55.8</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:45.8%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">45.8</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:57.9%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">The Home Depot</span></span><span
+                                            class="etbf-tr-val">57.9</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:67.8%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">67.8</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Laptops &amp; Computers">
+                                <h4 class="etbf-tr-cat">Laptops &amp; Computers</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:50.2%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">50.2</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:75.4%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">75.4</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:70.2%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">70.2</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:47.3%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">47.3</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:80.7%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">80.7</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Smartphones &amp; Accessories">
+                                <h4 class="etbf-tr-cat">Smartphones &amp; Accessories</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:59.2%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">59.2</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:72.6%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">72.6</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:65.8%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">65.8</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:62.6%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">62.6</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:68.0%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">68.0</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="TVs &amp; Home Entertainment">
+                                <h4 class="etbf-tr-cat">TVs &amp; Home Entertainment</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:55.0%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">55.0</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:64.3%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">64.3</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:63.6%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">63.6</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:63.7%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">63.7</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:85.1%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Best Buy</span></span><span
+                                            class="etbf-tr-val">85.1</span></span>
+                                </div>
+                            </section>
+                            <section class="etbf-tr-panel" aria-label="Travel">
+                                <h4 class="etbf-tr-cat">Travel</h4>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">ChatGPT</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:40.2%;background:#002829;color:#ffffff"><span
+                                                class="etbf-tr-name">Expedia</span></span><span
+                                            class="etbf-tr-val">40.2</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Gemini</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:40.5%;background:#8FD6D0;color:#121212"><span
+                                                class="etbf-tr-name">Expedia</span></span><span
+                                            class="etbf-tr-val">40.5</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Mode</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:42.0%;background:#F7594E;color:#121212"><span
+                                                class="etbf-tr-name">Expedia</span></span><span
+                                            class="etbf-tr-val">42.0</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Google AI Overview</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:38.8%;background:#EEBE88;color:#121212"><span
+                                                class="etbf-tr-name">Expedia</span></span><span
+                                            class="etbf-tr-val">38.8</span></span>
+                                </div>
+                                <div class="etbf-tr-row">
+                                    <span class="etbf-tr-model">Meta AI</span>
+                                    <span class="etbf-tr-track"><span class="etbf-tr-bar"
+                                            style="width:46.7%;background:#8E3229;color:#ffffff"><span
+                                                class="etbf-tr-name">Expedia</span></span><span
+                                            class="etbf-tr-val">46.7</span></span>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="etbf-footer-row">
+                            <span class="etbf-footer-source">Source: Evertune (www.evertune.ai)</span>
+                            <svg class="etbf-footer-logo" role="img" aria-label="Evertune"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 94.5" fill="#F7594E">
+                                <path
+                                    d="M8.9 94.2C2.9 93.6-0.3 89.1 0.1 81.8C0.4 76.6 2.3 69.5 7 56.4C9.4 49.7 9.3 50.4 7.7 50C1.9 48.8 3.1 44.8 10.1 42.5C12.8 41.6 12.7 41.7 17.9 30.5C22.9 19.6 23 19.1 20.9 19.6C16.7 20.6 12.6 22 11.3 23C9 24.6 5.8 23.3 5.7 20.6C5.7 18.1 7.5 16.9 13.9 14.8C19 13.2 23.8 11.7 24.2 11.7C25.1 11.8 26.8 10.6 27.4 9.6C28.8 7.2 29.6 6.9 32.6 8C34.9 8.8 36.4 8.6 46.6 6C51.6 4.7 59 2.9 63.1 1.8C71.3-0.3 71.5-0.3 73.2 1.2C76.1 3.6 73.3 5.5 62.9 8.3C58.2 9.5 43.7 13.5 37.8 15.1C34 16.1 33.7 16.4 32.2 20C30.4 24.2 26.1 34.2 25.4 35.9C24.3 38.7 23.4 38.8 46.5 33.1C52.4 31.6 54.4 31.8 55.4 33.8C56.2 35.3 55.4 36.6 53.2 37.3C51.7 37.9 37.4 41.9 29.6 44C19.7 46.6 20.4 45.6 13.7 65.9C7.3 85.2 7.8 88.4 16.9 86C27 83.3 33.2 80.9 40.1 77C44.9 74.3 46.8 73.9 48.9 75.3C51.6 76.8 50.8 79 46.8 81.7C34.2 90.1 18.7 95.3 8.9 94.2ZM191.8 89.8C190.8 89.1 190.1 87.4 190.3 85.8C190.7 82.3 198.1 58.3 202 47.8C202.4 46.6 202.8 45.6 202.8 45.5C202.8 45.4 200.8 45.3 198.4 45.4C194.4 45.6 194 45.5 192.9 45.1C191.8 44.5 191.8 44.5 191.8 46.7C191.8 53.1 188.7 55.8 185.3 52.5C184.4 51.6 184.4 51.5 184 47.7C183.4 42.6 182.8 42.7 177.8 49.4C173.7 54.8 172.7 56.3 165 68.2C155.5 82.9 154.4 84.3 151 84.2C144.7 84.2 144.7 79.2 151.2 65.9C151.6 64.9 151.6 64.9 149.7 66.2C139.9 73.1 127.6 79.7 121.1 81.6C109.5 85 99 76.9 101.4 66.5C106.6 44.1 128.8 24.1 136.5 34.8C141.2 41.3 129.1 59 112.7 69.9C108.6 72.6 108.3 73.7 111.1 75C116.4 77.4 137.1 67.3 153.3 54.3C159.3 49.6 163.3 43 163.9 37.3C164.3 32.8 165.4 31.1 167.8 31.3C171.4 31.7 172.6 36.3 170.5 42.6C169.9 44.3 169.9 44.5 170.5 44.5C170.9 44.5 171.5 43.9 176.5 38.3C181.1 33.1 188.1 33.6 190.5 39.4C191 40.4 191.2 40.7 191.5 40.6C192.1 40.4 196.9 39.8 201.1 39.5C203.1 39.4 204.8 39.2 204.9 39.2C204.9 39.2 206.2 35.8 207.7 31.6C216.1 9.3 218.5 5.6 222.2 9.9C223.7 11.5 223.6 11.7 221.3 17C220.6 18.7 219.1 22.1 218.1 24.4C216.3 28.5 212.7 38.5 212.8 38.7C212.9 38.7 216.3 38.6 220.4 38.3C229.7 37.8 231.2 38.1 231.2 40.4C231.2 42.6 229.8 43.1 219.5 43.9C214.7 44.3 210.9 44.6 210.8 44.6C210.8 44.7 204.9 62 201.1 73.6C195.7 89.8 195.9 89.4 195 89.9C194 90.4 192.8 90.3 191.8 89.8ZM274.4 89.9C271.4 88.8 271.3 87.1 274.1 81.3C275.2 78.9 277.5 73.9 279.3 70.3C282.8 62.7 282.8 62.8 280.6 65C274.1 71.3 262.3 80.1 257.4 82.4C248.2 86.6 241.5 83.7 240.6 75.1C240.4 72.4 240.3 72.4 236 76C229.8 81.2 228.3 81.8 224.9 81C218.3 79.3 220 68 229 53C235.1 42.7 238.7 39.6 242.2 41.3C244.5 42.5 244.3 43.6 241.3 48C236.5 55 233.5 60.4 231.3 66C228.5 73.1 229.2 72.8 239.5 62.3C248.8 52.7 249.4 52.3 252.4 53.8C254.9 55 255 55.8 252.9 60.8C248.3 71.5 247 78 249.6 78C254.2 78 272.2 64.7 284.8 51.8C288.9 47.6 288.9 47.6 289.5 40.1C290 33.8 291.3 31.9 294.4 32.7C298.2 33.7 299 37.2 297.4 45.6C296.4 50.9 296.5 51 299.2 50C305.7 47.6 308.9 52.3 307.6 62.6C306.5 72.3 307 76.7 309.2 76.1C312.9 75.2 326.7 64.3 337.8 53.3C341 50.1 343.8 47.5 344 47.5C344.1 47.5 345.1 46.3 346.2 44.9C355.4 33.1 364.4 29 370.1 34C376.4 39.5 364.5 58.2 347.8 69.4C342.4 73 342.3 75.1 347.5 75.4C354.8 76 380 62 391.2 51.1C395.7 46.8 397.8 46.3 399.5 49.1C403.2 55.2 365.2 81.3 351 82.4C342.2 83.1 334.2 75.9 335.5 68.2C335.7 66.4 335.9 66.3 333 69C320.6 80.5 312.8 85 307 84.1C300.2 83 298 77.7 299.2 64.5C299.4 62.5 299.5 60.9 299.4 60.9C298.6 60.1 298.1 60.7 293.2 67.9C291.9 69.8 289.6 73.2 288.1 75.4C279 88.9 278.4 89.6 277.1 90C275.9 90.3 275.6 90.3 274.4 89.9ZM64.6 83.7C60.2 81.5 61.1 76.6 72.9 38.3C74 34.6 75.3 33.8 77.9 34.9C80 35.7 80.8 40.3 79.3 42.5C78 44.6 73.3 61.9 74 62.6C74.4 63 75 62.3 81.6 52.5C89.3 41 94.9 33.5 96.2 32.6C97.8 31.6 101 32.3 101.7 33.9C102.3 35 101.8 36 97.1 43C92.4 50 85.1 61.4 79.4 70.6C71.1 84 68.9 85.9 64.6 83.7ZM111.7 62.7C116.7 59.8 129.4 44.2 129.7 40.3C130.2 34.6 118.1 46.3 113 56.5C110.2 62.2 109.8 63.7 111.7 62.7ZM346.6 62.2C353.2 57.8 365.6 41.4 364 39.2C362.1 36.8 351.9 47.3 347.6 56.1C344.3 62.8 344.1 63.9 346.6 62.2Z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h4>Forbes Advisor</h4>
+
+                <p>As lead editor of data and automation at Forbes Advisor, Robinson was responsible for building and maintaining automated workflows that pulled internal and third-party data, transformed and cleaned it and pushed it to thousands of data visualizations and hundreds of programmatic on-page text updates. Charts needed to provide the latest available data, label their update date and source and keep brand style guidelines.</p>
+
+
+                <div style="min-height:563px" id="datawrapper-vis-9OYeo">
+                    <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/9OYeo/embed.js"
+                        charset="utf-8" data-target="#datawrapper-vis-9OYeo"></script><noscript><img decoding="async"
+                            src="https://datawrapper.dwcdn.net/9OYeo/full.png"
+                            alt="Unemployment by Metro Area (Choropleth map)" /></noscript>
+                </div>
+
+
+                
+                <iframe title="Bitcoin Return" aria-label="Table" id="datawrapper-chart-qgZ96"
+                    src="https://datawrapper.dwcdn.net/qgZ96/13/" scrolling="no" frameborder="0"
+                    style="width: 0; min-width: 100% !important; border: none;" height="190"
+                    data-external="1"></iframe>
+                <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", function (a) { if (void 0 !== a.data["datawrapper-height"]) { var e = document.querySelectorAll("iframe"); for (var t in a.data["datawrapper-height"]) for (var r, i = 0; r = e[i]; i++)if (r.contentWindow === a.source) { var d = a.data["datawrapper-height"][t] + "px"; r.style.height = d } } }) }();
+                </script>
+                
+
+                <div id="everviz-tI9CltC0a" class="everviz-tI9CltC0a">
+                    <script src="https://app.everviz.com/inject/tI9CltC0a/?v=7" defer="defer"></script>
+                </div>
+
+
+                <h4>HousingWire</h4>
+
+                <p>Robinson was HousingWire's first data journalist and was therefore able to help decide on the data visualization vendor selection process and work with designers to shape the HousingWire's data visualization aesthetic. He built hundreds of visualizations in his time there, both for his own reporting and for the broader newsroom. His visualization-filled reporting won SABEW's Data Journalism award, small division, in 2023.</p>
+
+
+                <div class="flourish-embed flourish-chart" data-src="visualisation/17687565?1643471">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+
+
+                <div class="flourish-embed flourish-chart" data-src="visualisation/17571775?1643471">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+
+
+                <div class="flourish-embed flourish-chart" data-src="visualisation/16382854?1643471">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+
+
+                <div class="flourish-embed flourish-map" data-src="visualisation/16385435?1643471">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script>
+                </div>
+
+                
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer border-top">
+        <div class="container site-width py-4 small">Will Robinson</div>
+    </footer>
+</body>
+
+</html>
