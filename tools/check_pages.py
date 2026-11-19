@@ -10,7 +10,7 @@ import tarfile
 PUBLIC = set("""
 portfolio.html assets/archive.css assets/archive.js assets/bootstrap-LICENSE
 assets/bootswatch-LICENSE assets/flatly.min.css assets/portfolio.css coding.html
-data-analysis.html index.html journalism.html
+data-analysis.html index.html journalism.html visualizations.html
 """.split())
 INDEX = 'archive-data/00000000000000000000000000000000.bin'
 CIPHERTEXT = re.compile(r'archive-data/[a-f0-9]{32}\.bin')
