@@ -12,5 +12,26 @@
 .archive-clip audio { display: block; max-width: 100%; }
 .archive-embed iframe { display: block; width: 100%; min-height: 32rem; border: 0; margin-top: 1rem; }
 .archive-embed .archive-story-frame { height: clamp(32rem, 78svh, 56rem); }
-.archive-result { border-top: 1px solid var(--line); padding-block: .75rem; }
-.archive-result button { text-align: start; }
+
+.portfolio-table-scroll { overflow-x: auto; border: 1px solid #ddd8cb; }
+.portfolio-table { width: 100%; min-width: 42rem; background: #fffdf7; }
+.portfolio-table th, .portfolio-table td { padding: .85rem 1rem; text-align: left; vertical-align: top; }
+.portfolio-table thead { background: #ebe7dc; }
+.portfolio-table tbody tr + tr { border-top: 1px solid #ddd8cb; }
+.portfolio-table tbody tr:hover, .portfolio-table tbody tr:focus-within { background: #f5f2e8; }
+.portfolio-table th button {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.portfolio-table th button::after { content: '↕' / ''; opacity: .55; }
+.portfolio-table th[aria-sort="ascending"] button::after { content: '↑' / ''; opacity: 1; }
+.portfolio-table th[aria-sort="descending"] button::after { content: '↓' / ''; opacity: 1; }
+.portfolio-table time { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.portfolio-table .portfolio-title { text-align: start; white-space: normal; }
